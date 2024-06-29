@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="B.css">
+</head>
+<body>
+    <center>
+      <div class="container">
+        <form id="form1">
+        <h2> Movie Ticket Booking</h2>
+            <input type="text" placeholder="Email" required>
+            <input type="pass" placeholder="password" required>
+            <input type="pass" placeholder="Confirm password" required>
+
+              <div class="head">
+                <button type="button" id="Next1">NEXT</button>
+              </div>
+            </form>
+
+            <form id="form2">
+                <h2>Booking System</h2>
+                <table style="border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <td> <label for="Movies" class="heading"> <span style="color: red;">*</span>  Select Movies </label></td>
+                            <td>
+                              <select name="movie" id="movies">
+                                <option value="KGF-3">KGF-3</option>
+                                <option value="RRR">RRR</option>
+                                <option value="DHANGAL">DHANGAL</option>
+                                <option value="URI">URI</option>
+                              </select> 
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td> <label for="seat" class="heading" ><span style="color: red;">*</span> Seat Selection </label></td>
+                            <td>  <select name="seat" id="seat">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                            </td>
+                       </tr>
+
+                       <tr>
+                        <td> <label for="pyment" class="heading"><span style="color: red;">*</span> Pyment Method </label></td>
+                        <td> <select name="pyment" id="pyment">
+                            <option value="Phone Pay">Phone Pay</option>
+                            <option value="Google Pay"> Google Pay </option>
+                            <option value="PAYTM">PAYTM</option>
+                        </select>
+                        </td>
+                  </tr>
+
+                  <tr>
+                    <td> <label for="seat" class="heading"><span style="color: red;">*</span> Seat Availability </label></td>
+                    <td> <select name="seat" id="seat">
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                    </select>
+                    </td>
+                </tr>
+    
+                    </tbody>
+                </table>
+                  <div>
+                    <button type="button" id="Back1">BACK</button>
+                    <button type="button" id="Next2">NEXT</button>
+                  </div>
+            </form>
+
+             <form id="form3">
+                    <h2>Seat Management</h2>
+               <table>
+                     <tbody>
+                            <tr>
+                                <td> <label for="screen" class="heading"><span style="color: red;">*</span> Screen Selection </label></td>
+                                <td> <select name="screen" id="screen">
+                                   <option value="2D">2D</option>
+                                   <option value="3D">3D</option>
+                                   <option value="HD">HD</option>
+                                   <option value="Full HD">Full HD</option>
+                                </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> <label for="seat limit" class="heading"><span style="color: red;">*</span> Seat Limit </label></td>
+                                <td> <select name="seat limit" id="seat limit">
+                                       <option value="1-10"> First Row :- 1-10</option>
+                                       <option value="11-20">Second Row :- 11-20</option>
+                                       <option value="21-30">Third Row :- 21-30</option>
+                                       <option value="31-41">Fourth Row :- 31-41</option>
+                                </select>
+                                </td>
+                           </tr>
+           
+                           <tr>
+                            <td><label for="food menu" class="heading"><span style="color: red;">*</span> Food Menu </label></td>
+                             <td><select name="Fruits" id="food menu">
+                                <option value="Mango">Mango</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Pizza">Pizza</option>
+                                <option value="Burger">Burger</option>
+                                <option value="Pop-corn">Pop-corn</option>
+                             </select>
+                             </td> 
+                       </tr>
+     
+                       <tr>
+                        <td><label for="Booking" class="heading"><span style="color: red;">*</span> Booking Confirmation  </label></td>
+
+                        <td> <input type="radio" id="Booking" name="booking"
+                            value="Email" required>
+                                   
+                            <label for="Booking" class="heading">Email </label>
+
+                            <input type="radio" id="Booking" name="booking"
+                            value="SMS" required>
+
+                            <label for="Booking" class="heading">SMS</label>
+                            
+                            </td>
+                   </tr> 
+                     </tbody>
+               </table>
+                          <div>
+                            <button type="button" id="Back2">BACK</button>
+                             <button type="submit">SUBMIT</button>
+                          </div>
+             </form>
+                   
+             <div class="pranay">
+                     <div id="progress"></div>
+
+                <div class="p"><small>Step 1</small></div>
+                <div class="p"><small>Step 2</small></div>
+                <div class="p"><small>Step 3</small></div>
+             </div>
+
+      </div>
+
+       <script>
+            var form1 = document.getElementById("form1");
+            var form2 = document.getElementById("form2");
+            var form3 = document.getElementById("form3");
+
+            var Next1 = document.getElementById("Next1");
+            var Next2 = document.getElementById("Next2");
+            var Back1 = document.getElementById("Back1");
+            var Back2 = document.getElementById("Back2"); 
+
+            var progress = document.getElementById("progress");
+
+            Next1.onclick = function(){
+                form1.style.left="-450px";
+                 form2.style.left="40px";
+                 progress.style.width= "240px";
+                }
+
+            Back1.onclick = function(){
+                form1.style.left="40px";
+                 form2.style.left="450px";
+                 progress.style.width= "120px";
+                }
+
+            Next2.onclick = function(){
+                form2.style.left="-450px";
+                 form3.style.left="40px";  
+                 progress.style.width= "360px";
+                }   
+                   
+          Back2.onclick = function(){
+                form2.style.left="40px";
+                 form3.style.left="450px";
+                 progress.style.width= "240px";
+                }     
+
+       </script>
+
+
+
+
+    </center>
+
+</body>
+</html>

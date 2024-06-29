@@ -1,0 +1,91 @@
+.container{
+    width: 360px;
+    height: 550px;
+    background: #87d7cb;
+    position: relative;
+    border-radius: 5px;
+    margin: 5px;
+    overflow: hidden;
+    line-height: 40px;
+}
+.container form{
+    position: absolute;
+    width: 250px;
+    top: 70px;
+    left: 50px;
+    transition: 0.5s; 
+    height: 400px;  
+}
+form input{
+    line-height: 60px;
+    width: 100%;
+    margin: 5px 0;
+    background: lavender;
+    border-bottom: 1px solid #999;
+    outline: none;
+    border: 0;
+    padding: 10px 5px;
+}
+.head{
+    text-align: center;
+    line-height: 20px;
+}
+form button{
+    width: 90px;
+    height: 35px;
+    background: #eb5757;
+    border-radius: 30px;
+    border: 0;
+    color: #e6e0dd;
+    cursor: pointer;
+}
+#form2{
+    left: 450px;
+}
+#form3{
+    left: 450px;
+}
+.pranay{
+    width: 400px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+}
+.p{
+    width: 100px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+#progress{
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    transition: 1s;
+    background: linear-gradient(to right,#ff105f,#ffad06);  
+    transition: 1s;
+}
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #ffad06;
+}
+.heading {
+    color: white;
+    row-gap: 90px;
+    width: 300px;
+    
+}
+input[type='radio']{
+    transform: 1.3;
+}
+
